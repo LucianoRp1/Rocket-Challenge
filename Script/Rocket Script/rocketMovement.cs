@@ -38,7 +38,7 @@ public class rocketMovement : MonoBehaviour
     private bool isFuelEmpty = false;
     private bool isSoundAir = false;
     private bool soundPlayed = false;
-    private bool isRotatingCorpo = false; // Bandera para controlar si la rotación está en curso
+    private bool isRotatingCorpo = false; 
     private bool soundPlayedCorpo = false;
     private bool isSecoundPropeller = false;
     #endregion
@@ -60,7 +60,7 @@ public class rocketMovement : MonoBehaviour
     #endregion
 
     #region Quaternion
-    private Quaternion initialCorpoRotation; // Rotación inicial para corpoNariz
+    private Quaternion initialCorpoRotation; 
     #endregion
 
     #region
@@ -220,7 +220,7 @@ public class rocketMovement : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
-        // Rotación completada, restablece las banderas y el tiempo
+       
         corpoNariz.transform.rotation = targetRotation;
         isRotatingCorpo = false;
         timeRotateCorpo = 0f;
